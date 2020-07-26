@@ -1,0 +1,19 @@
+<!--pages/components/cartItem/cartItem.wxml-->
+<view class="cartItem_wrapper" style="background-color:{{selectedBg}};">
+  <view class="cover_wrapper">
+  <image
+    src="{{bookInfo.bookColl.bookCover}}"
+    class="cover"
+    bindtap="onClick"
+  />
+  </view>
+  <view class="info">
+      <text class="name">{{bookInfo.name}}</text>
+      <text class="price">$ {{bookInfo.price}}</text>
+  </view>
+  <view class="control">
+    <van-button round bindtap="inc" size="mini" custom-class="inc">+</van-button>
+    <text class="quantity"> {{quantity}} </text>
+    <van-button round bindtap="dec" size="mini" custom-class="dec">-</van-button>
+  </view>
+</view>

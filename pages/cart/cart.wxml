@@ -1,0 +1,21 @@
+<!--pages/cart/cart.wxml-->
+<view>
+  <view class="cart_wrapper" wx:if="{{cartItems.length > 0}}">
+  <van-grid column-num="1">
+    <van-grid-item use-slot wx:for-items="{{ cartItems }}" wx:key="bookId" wx:for-item="cartItem">
+      <cartItem itemInfo="{{cartItem}}" bind:reCalc="reCalc" bind:selectItem="selectItem"/>
+    </van-grid-item>
+  </van-grid>
+  </view>
+
+  <view class="cart_wrapper" wx:else>
+    <text class="placeholder">
+      Currently nothing inside.
+    </text>
+  </view>
+
+  <van-goods-action>
+  <van-goods-action-button color="#71A9DC" text="CHECKOUT" bind:click="checkout" />
+</van-goods-action>
+
+</view>

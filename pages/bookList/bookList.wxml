@@ -1,0 +1,24 @@
+<!--pages/books/books.wxml-->
+<view>
+
+  <view style="position: -webkit-sticky;">
+    <van-search
+      class="search"
+      value="{{ searchValue }}"
+      placeholder="What are you looking for?"
+      shape="round"
+      use-action-slot
+      bind:change="onChange"
+      bind:search="onSearch"
+    ></van-search>
+  </view>
+
+
+  <view class="bookList_wrapper">
+  <van-grid column-num="2">
+    <van-grid-item use-slot wx:for-items="{{ bookInfos }}" wx:key="bookId" wx:for-item="bookInfo">
+      <book bookInfo="{{bookInfo}}"/>
+    </van-grid-item>
+  </van-grid>
+  </view>
+</view>

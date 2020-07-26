@@ -1,0 +1,5 @@
+<!--pages/components/orderItem/orderItem.wxml-->
+<view class="orderItem_wrapper">
+  <text class="orderNo">OrderNo.{{itemInfo.purchaseId}}  </text>
+  <text class="totalPrice">TotalPrice: {{itemInfo.totalPrice}}</text>
+</view>

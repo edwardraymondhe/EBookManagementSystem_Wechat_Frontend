@@ -1,0 +1,50 @@
+/* pages/components/cartItem/cartItem.wxss */
+.cartItem_wrapper {
+  display: grid;
+  width: 100vw;
+  height: 50vw;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 60% 40%;
+  grid-gap: 1px;
+  border-radius: 5px;
+}
+
+.cartItem_wrapper .cover_wrapper{
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 2;
+  height: 100%;
+  width: 100%;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.cartItem_wrapper .cover {
+  border-radius: 5px;
+  width: 35vw;
+  height: 90%;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+}
+
+.cartItem_wrapper .info {
+  display: grid;
+  grid-row: 1 / span 1;
+  grid-column: 2 / span 1;
+  padding: 5px;
+
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+}
+
+.cartItem_wrapper .inc,
+.cartItem_wrapper .dec
+{
+  width: 5vh;
+}
+
+.cartItem_wrapper .control{
+  right: 0;
+  bottom: 0;
+}

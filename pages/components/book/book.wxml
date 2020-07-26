@@ -1,0 +1,13 @@
+<!--pages/books/books.wxml-->
+<view class="book_wrapper" bindtap="onClick">
+  <view class="cover_wrapper">
+  <image
+    src="{{bookInfo.bookColl.bookCover}}"
+    class="cover"
+  />
+  </view>
+  <view class="info">
+    <text class="name">{{bookInfo.name}}</text>
+    <text class="price">$ {{bookInfo.price}}</text>
+  </view>
+</view>

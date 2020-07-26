@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/bookList/bookList",
+    "pages/logs/logs",
+    "pages/bookDetail/bookDetail",
+    "pages/order/order",
+    "pages/profile/profile",
+    "pages/cart/cart"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/bookList/bookList",
+        "text": "Home",
+        "iconPath": "pages/assets/images/home.png",
+        "selectedIconPath": "pages/assets/images/home.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "Cart",
+        "iconPath": "pages/assets/images/cart.png",
+        "selectedIconPath": "pages/assets/images/cart.png"
+      },      {
+        "pagePath": "pages/order/order",
+        "text": "Order",
+        "iconPath": "pages/assets/images/order.png",
+        "selectedIconPath": "pages/assets/images/order.png"
+      },      {
+        "pagePath": "pages/profile/profile",
+        "text": "Profile",
+        "iconPath": "pages/assets/images/profile.png",
+        "selectedIconPath": "pages/assets/images/profile.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

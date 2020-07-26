@@ -1,0 +1,23 @@
+<!--pages/bookDetail/bookDetail.wxml-->
+<!--pages/books/books.wxml-->
+<view class="bookDetail_wrapper">
+      <!-- <view class="cover" wx:if="{{loading == true}}">
+        <van-loading color="#1989fa" vertical/>
+      </view> -->
+    <view class="detail">
+      <view class="cover">
+        <van-image width="100%" height="100%" fit="cover" src="{{bookInfo.bookColl.bookCover}}"/> 
+      </view>
+      <view class="info">
+        <text class="name">{{bookInfo.name}}</text>
+        <text class="author">{{bookInfo.author}}</text>
+        <text class="intro">{{bookInfo.bookColl.bookIntro}}</text>
+      </view>
+    </view>
+    <van-goods-action class="bar" fixed = "true">
+      <text class="price">Price: ${{bookInfo.price}}</text>
+      <van-goods-action-icon icon="cart-o" text="Cart" bindtap="onClickCart"/>
+      <van-goods-action-button color="#71A9DC" text="ADD TO CART" type="warning" bind:click="onClickAdd" wx:if="{{bookInfo.stock >= 0 && bookInfo.status == 'Available'}}"/>
+      <van-goods-action-button color="#71A9DC" text="NOT IN STOCK" type="warning" bind:click="onClickAdd" disabled="true" wx:else/>
+    </van-goods-action>
+</view>

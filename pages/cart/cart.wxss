@@ -1,0 +1,9 @@
+/* pages/cart/cart.wxss */
+page{
+
+}
+
+.cart_wrapper{
+  width: 100vw;
+  text-align: center;
+}

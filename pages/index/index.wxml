@@ -1,0 +1,88 @@
+<!--index.wxml-->
+<view class="panel_wrapper" style="background:url('../assets/images/main_background_light.jpg'); background-size: cover; background-repeat: no-repeat;">
+
+  <view class="panel" wx:if="{{mode == true}}">
+    <text class="intro">#Login, for your journey of literature#</text>
+    <view class="info">
+      <van-cell-group>
+        <van-field
+          value="{{ username }}"
+          bindblur="bindUsername"
+          input-align="center"
+          custom-style="background: none; border: none; border-bottom: 1px solid lightgrey;"
+          required
+          clearable
+          placeholder="What's the reader's name?"
+          bind:click-icon="onClickIcon"
+        />
+
+        <van-field
+          value="{{ password }}"
+          bindblur="bindPassword"
+          custom-style="background: none; border: none; border-bottom: 1px solid lightgrey;"
+          type="password"
+          placeholder="What's the reader's password?"
+          input-align="center"
+          required
+          clearable
+          border="{{ false }}"
+        />
+      </van-cell-group>
+    </view>
+
+    <van-button
+    plain
+    bindtap="bindLogTap"
+    type="default"
+    class="login"
+    custom-style="background: none;"
+    >Login</van-button>
+    <view class="loginReg" bindtap="bindRegister">
+      Come and share our common interest.
+    </view>
+  </view>
+
+  <view class="panel" wx:elif="{{mode == false}}">
+    <text class="intro">#Join us, for your journey of literature#</text>
+    <view class="info">
+      <van-cell-group>
+        <van-field
+          value="{{ username }}"
+          bindblur="bindUsername"
+          custom-style="background: none; border: none; border-bottom: 1px solid lightgrey;"
+          input-align="center"
+          required
+          clearable
+          placeholder="What's the reader's name?"
+          bind:click-icon="onClickIcon"
+        />
+
+        <van-field
+          value="{{ password }}"
+          bindblur="bindPassword"
+          custom-style="background: none; border: none; border-bottom: 1px solid lightgrey;"
+          type="password"
+          placeholder="What's the reader's password?"
+          input-align="center"
+          required
+          clearable
+          border="{{ false }}"
+        />
+      </van-cell-group>
+    </view>
+    <van-button
+    plain
+    bindtap="bindRegTap"
+    type="default"
+    class="register"
+    custom-style="background: none;"
+    >Regsiter</van-button>
+    <view class="registerLog" bindtap="bindLogin">
+      Already got an account?
+    </view>
+  </view>
+
+  <!-- <view class="title">
+    E-Book
+  </view> -->
+</view>

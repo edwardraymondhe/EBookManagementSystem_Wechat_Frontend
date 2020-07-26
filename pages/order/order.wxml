@@ -1,0 +1,18 @@
+<!--pages/order/order.wxml-->
+<view>
+
+  <view class="order_wrapper" wx:if="{{orderItems.length > 0}}">
+  <van-grid column-num="1">
+    <van-grid-item use-slot wx:for-items="{{ orderItems }}" wx:key="orderId" wx:for-item="orderItem">
+      <orderItem itemInfo="{{orderItem}}"/>
+    </van-grid-item>
+  </van-grid>
+  </view>
+
+  <view class="order_wrapper" wx:else>
+    <text class="placeholder">
+      Currently nothing inside.
+    </text>
+  </view>
+
+</view>
